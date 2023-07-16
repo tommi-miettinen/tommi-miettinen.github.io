@@ -5,11 +5,12 @@ import { site } from "../site";
 const ContactInfo = () => {
   return (
     <div className="p-4">
+      <h2 className="text-xl mb-2">Yhteystiedot</h2>
       <p>{site.email}</p>
       <p>{site.phone}</p>
-      <div className="flex py-2">
-        <LinkedInButton className="border w-[40px] h-[40px] flex items-center justify-center" />
-        <GithubButton className="border w-[40px] h-[40px] flex items-center justify-center" />
+      <div className="flex py-2 -ml-2">
+        <LinkedInButton className="w-[40px] h-[40px] flex items-center justify-center" />
+        <GithubButton className="w-[40px] h-[40px] flex items-center justify-center" />
       </div>
     </div>
   );
