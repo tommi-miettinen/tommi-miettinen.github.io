@@ -8,14 +8,16 @@ const Introduction = () => {
   const params = useQueryParams();
   const name = params.get("vastaanottaja");
 
-  return (
-    <div className="p-4 h-full flex flex-col">
-      <h1 className="text-xl text-white">
-        Hei <span className="underline capitalize">{name},</span> olen Tommi Miettinen, itseopiskellut frontend/fullstack-kehittäjä
-        Tampereelta.
-      </h1>
-    </div>
+  const greeting = name ? (
+    <h1 className="text-xl text-white">
+      Hei <span className="underline capitalize">{name},</span> olen Tommi Miettinen, itseopiskellut frontend/fullstack-kehittäjä
+      Tampereelta.
+    </h1>
+  ) : (
+    <h1 className="text-xl text-white">Hei olen Tommi Miettinen, itseopiskellut frontend/fullstack-kehittäjä Tampereelta.</h1>
   );
+
+  return <div className="p-4 h-full flex flex-col">{greeting}</div>;
 };
 
 export default Introduction;

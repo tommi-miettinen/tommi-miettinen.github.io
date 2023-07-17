@@ -4,12 +4,14 @@ interface SectionOrderStore {
   navItems: string[];
   currentlyDraggedItem: null | string;
   currentlyHoveredItem: null | string;
+  currentlyCopiedItem: null | string;
 }
 
 export const useSectionOrderStore = create<SectionOrderStore>(() => ({
-  navItems: ["Esittely", "Taidot", "Kokemus", "Sertifikaatit", "Yhteystiedot"],
+  navItems: ["Esittely", "Taidot", "Kokemus", "Sertifikaatit", "Harrastukset", "Yhteystiedot"],
   currentlyDraggedItem: null,
   currentlyHoveredItem: null,
+  currentlyCopiedItem: null,
 }));
 
 export const setCurrentlyDraggedItem = (item: string) => {
@@ -37,4 +39,18 @@ export const handleDrop = (droppedOnItem: string) => {
 
 export const setCurrentlyHoveredItem = (item: string | null) => {
   useSectionOrderStore.setState({ currentlyHoveredItem: item });
+};
+
+export const deleteNavItem = (item: string) =>
+  useSectionOrderStore.setState({ navItems: useSectionOrderStore.getState().navItems.filter((navItem) => navItem !== item) });
+
+export const copyNavItem = (item: string) => {
+  useSectionOrderStore.setState({ currentlyCopiedItem: item });
+};
+
+export const pasteNavItem = () => {
+  const { currentlyCopiedItem, navItems } = useSectionOrderStore.getState();
+  if (!currentlyCopiedItem) return;
+
+  useSectionOrderStore.setState({ navItems: [...navItems, currentlyCopiedItem] });
 };

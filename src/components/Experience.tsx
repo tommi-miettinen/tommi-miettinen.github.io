@@ -53,12 +53,12 @@ const Experience = () => {
           </li>
           <li className="ml-6 flex flex-col">
             <span className="absolute flex items-center justify-center w-6 h-6 bg-indigo-300 rounded-full -left-3"></span>
-            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Freelance</h3>
+            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Collapick</h3>
             <p>Harjoittelija</p>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2019 - 2020</time>
 
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-              Työtehtäviini kuului manuaalista testausta sekä React-komponenttien tekemistä heidän sisäiseen työkaluunsa.
+              Manuaalista testausta sekä React-kehitystä sisäiseen työkaluun.
             </p>
             <button
               onClick={() => setSelectedImage(site.chadbet)}

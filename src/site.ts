@@ -1,6 +1,7 @@
 import skhkollaasi from "./assets/skhkollaasi.png";
 import chadbet from "./assets/chadbetkuva.png";
 import fsopen from "./assets/fsopen.jpg";
+import palkkatuki from "./assets/palkkatuki.png";
 
 export const site = {
   email: "tommi.a.miettinen@gmail.com",
@@ -10,4 +11,5 @@ export const site = {
   projectImage: skhkollaasi,
   chadbet: chadbet,
   certificates: [fsopen],
+  wageSubsidy: palkkatuki,
 };
