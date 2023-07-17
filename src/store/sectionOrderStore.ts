@@ -52,5 +52,8 @@ export const pasteNavItem = () => {
   const { currentlyCopiedItem, navItems } = useSectionOrderStore.getState();
   if (!currentlyCopiedItem) return;
 
-  useSectionOrderStore.setState({ navItems: [...navItems, currentlyCopiedItem] });
+  const sameNameCount = navItems.filter((item) => item.startsWith(currentlyCopiedItem)).length;
+  const newItem = sameNameCount > 0 ? `${currentlyCopiedItem}(${sameNameCount})` : currentlyCopiedItem;
+
+  useSectionOrderStore.setState({ navItems: [...navItems, newItem] });
 };

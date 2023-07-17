@@ -2,9 +2,9 @@ import GithubButton from "./GithubButton";
 import LinkedInButton from "./LinkedInButton";
 import { site } from "../site";
 
-const ContactInfo = () => {
+const ContactInfo = ({ id }: { id: string }) => {
   return (
-    <div className="p-4">
+    <div id={id} className="p-4">
       <h2 className="text-xl mb-2">Yhteystiedot</h2>
       <p>{site.email}</p>
       <p>{site.phone}</p>

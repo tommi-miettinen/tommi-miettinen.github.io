@@ -2,11 +2,11 @@ import { site } from "../site";
 import { useState, Fragment } from "react";
 import Modal from "./Modal";
 
-const Extra = () => {
+const Extra = ({ id }: { id: string }) => {
   const [showItem, setShowItem] = useState(false);
   return (
     <Fragment>
-      <div className="p-4">
+      <div id={id} className="p-4">
         <h3 className="text-xl">Lisätiedot</h3>
         <div className="flex items-center border border-green-500 bg-green-400 bg-opacity-5 border-opacity-30 p-4 rounded-md">
           Olen oikeutettu palkkatukeen 7 kuukauden ajalta.{" "}

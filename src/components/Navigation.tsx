@@ -34,35 +34,37 @@ const CustomTreeViewItem = ({ item }: { item: string }) => {
   };
 
   return (
-    <div
-      onMouseEnter={() => setCurrentlyHoveredItem(item)}
-      onMouseLeave={() => setCurrentlyHoveredItem(null)}
-      onDragOver={(e) => e.preventDefault()}
-      onDrop={() => handleDrop(item)}
-      onDrag={() => setCurrentlyDraggedItem(item)}
-      draggable={true}
-      className="hover:bg-gray-800 rounded"
-      onContextMenu={handleRightClick}
-    >
-      <TreeView.Item id="src/Avatar.tsx">
-        <TreeView.LeadingVisual>
-          <FileIcon />
-        </TreeView.LeadingVisual>
-        {item}
-      </TreeView.Item>
-      {isMenuOpen && (
-        <Menu isOpen={isMenuOpen} setIsOpen={() => setMenuOpen((v) => !v)} {...menuPosition}>
-          <div className="bg-gray-900 overflow-clip border border-gray-700 rounded w-[150px]">
-            <div className="text-sm hover:bg-gray-800 w-full px-5 py-1 cursor-pointer" onClick={() => handleDeleteNavItem(item)}>
-              Poista
+    <a href={`#${item}`}>
+      <div
+        onMouseEnter={() => setCurrentlyHoveredItem(item)}
+        onMouseLeave={() => setCurrentlyHoveredItem(null)}
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={() => handleDrop(item)}
+        onDrag={() => setCurrentlyDraggedItem(item)}
+        draggable={true}
+        className="hover:bg-gray-800 rounded"
+        onContextMenu={handleRightClick}
+      >
+        <TreeView.Item id="src/Avatar.tsx">
+          <TreeView.LeadingVisual>
+            <FileIcon />
+          </TreeView.LeadingVisual>
+          {item}
+        </TreeView.Item>
+        {isMenuOpen && (
+          <Menu isOpen={isMenuOpen} setIsOpen={() => setMenuOpen((v) => !v)} {...menuPosition}>
+            <div className="bg-gray-900 overflow-clip border border-gray-700 rounded w-[150px]">
+              <div className="text-sm hover:bg-gray-800 w-full px-5 py-1 cursor-pointer" onClick={() => handleDeleteNavItem(item)}>
+                Poista
+              </div>
+              <div className="text-sm hover:bg-gray-800 w-full px-5 py-1 cursor-pointer" onClick={() => handleCopyNavItem(item)}>
+                Kopioi
+              </div>
             </div>
-            <div className="text-sm hover:bg-gray-800 w-full px-5 py-1 cursor-pointer" onClick={() => handleCopyNavItem(item)}>
-              Kopioi
-            </div>
-          </div>
-        </Menu>
-      )}
-    </div>
+          </Menu>
+        )}
+      </div>
+    </a>
   );
 };
 

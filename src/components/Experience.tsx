@@ -2,12 +2,12 @@ import { useState, Fragment } from "react";
 import Modal from "./Modal";
 import { site } from "../site";
 
-const Experience = () => {
+const Experience = ({ id }: { id: string }) => {
   const [selectedImage, setSelectedImage] = useState("");
 
   return (
     <Fragment>
-      <div className="py-4 px-8 relative flex flex-col h-full">
+      <div id={id} className="py-4 px-8 relative flex flex-col h-full">
         <h2 className="text-xl mb-4 -ml-4">Kokemus</h2>
         <ol className="relative border-l border-gray-200 dark:border-gray-700 flex flex-col h-full">
           <li className="ml-6 flex flex-col">

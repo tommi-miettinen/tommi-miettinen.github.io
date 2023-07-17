@@ -192,9 +192,9 @@ const Testing = () => {
   );
 };
 
-const Skills = () => {
+const Skills = ({ id }: { id: string }) => {
   return (
-    <div className="p-4 flex flex-col gap-2 font-semibold">
+    <div id={id} className="p-4 flex flex-col gap-2 font-semibold">
       <h2 className="text-xl mb-2">Taidot</h2>
       <Languages />
       <Frontend />

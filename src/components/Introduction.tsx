@@ -4,7 +4,7 @@ const useQueryParams = () => {
   return params;
 };
 
-const Introduction = () => {
+const Introduction = ({ id }: { id: string }) => {
   const params = useQueryParams();
   const name = params.get("vastaanottaja");
 
@@ -17,7 +17,11 @@ const Introduction = () => {
     <h1 className="text-xl text-white">Hei olen Tommi Miettinen, itseopiskellut frontend/fullstack-kehittäjä Tampereelta.</h1>
   );
 
-  return <div className="p-4 h-full flex flex-col">{greeting}</div>;
+  return (
+    <div id={id} className="p-4 h-full flex flex-col">
+      {greeting}
+    </div>
+  );
 };
 
 export default Introduction;

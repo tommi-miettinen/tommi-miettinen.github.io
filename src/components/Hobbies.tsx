@@ -2,9 +2,9 @@ import wow from "../assets/wow.png";
 import csgo from "../assets/csgo.png";
 import overwatch from "../assets/overwatch.png";
 
-const Hobbies = () => {
+const Hobbies = ({ id }: { id: string }) => {
   return (
-    <div className="p-4">
+    <div id={id} className="p-4">
       <h3 className="text-xl">Harrastukset (Flexbox)</h3>
       <div className="h-[32px] flex items-center sm:w-[300px] justify-between">
         CSGO <img className="h-full" src={csgo} />
