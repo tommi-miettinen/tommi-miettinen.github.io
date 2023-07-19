@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Navigation from "./components/Navigation";
 import Introduction from "./components/Introduction";
 import ContactInfo from "./components/ContactInfo";
@@ -23,17 +24,23 @@ const App = () => {
   const currentlyHoveredItem = useSectionOrderStore((state) => state.currentlyHoveredItem);
 
   return (
-    <div onContextMenu={(e) => e.preventDefault()} className="h-screen w-screen flex bg-gray-900 text-white">
-      <div className="flex w-full h-full">
-        <Navigation />
-        <div className="flex flex-col w-full h-full overflow-auto py-8 gap-8 sm:p-8">
-          {navItems.map((item) => {
-            const baseName = item.split("(")[0];
-            return <div className={`${currentlyHoveredItem === item && "bg-gray-800"} rounded-md`}>{componentsMap[baseName](item)}</div>;
-          })}
+    <Fragment>
+      <div className="h-screen w-screen flex bg-gray-900 text-white">
+        <div className="flex w-full h-full">
+          <Navigation />
+          <div className="flex flex-col w-full h-full overflow-auto py-8 gap-8 sm:p-8">
+            {navItems.map((item) => {
+              const baseName = item.split("(")[0];
+              return (
+                <div key={item} className={`${currentlyHoveredItem === item && "bg-gray-800"} rounded-md`}>
+                  {componentsMap[baseName](item)}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "playwright test",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,13 +16,17 @@
     "@primer/react": "^35.26.1",
     "@types/uuid": "^9.0.2",
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-calendar-heatmap": "^1.9.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
     "styled-components": "^5.3.11",
+    "tailwind-merge": "^1.14.0",
     "uuid": "^9.0.0",
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@playwright/test": "^1.36.1",
     "@tailwindcss/forms": "^0.5.4",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",

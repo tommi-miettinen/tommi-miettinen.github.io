@@ -34,17 +34,17 @@ const CustomTreeViewItem = ({ item }: { item: string }) => {
   };
 
   return (
-    <a href={`#${item}`}>
-      <div
-        onMouseEnter={() => setCurrentlyHoveredItem(item)}
-        onMouseLeave={() => setCurrentlyHoveredItem(null)}
-        onDragOver={(e) => e.preventDefault()}
-        onDrop={() => handleDrop(item)}
-        onDrag={() => setCurrentlyDraggedItem(item)}
-        draggable={true}
-        className="hover:bg-gray-800 rounded"
-        onContextMenu={handleRightClick}
-      >
+    <div
+      onMouseEnter={() => setCurrentlyHoveredItem(item)}
+      onMouseLeave={() => setCurrentlyHoveredItem(null)}
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={() => handleDrop(item)}
+      onDrag={() => setCurrentlyDraggedItem(item)}
+      draggable={true}
+      className="hover:bg-gray-800 rounded"
+      onContextMenu={handleRightClick}
+    >
+      <a href={`#${item}`}>
         <TreeView.Item id="src/Avatar.tsx">
           <TreeView.LeadingVisual>
             <FileIcon />
@@ -63,8 +63,8 @@ const CustomTreeViewItem = ({ item }: { item: string }) => {
             </div>
           </Menu>
         )}
-      </div>
-    </a>
+      </a>
+    </div>
   );
 };
 

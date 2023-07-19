@@ -1,6 +1,6 @@
 import { useState, Fragment } from "react";
 import { site } from "../site";
-import Modal from "./Modal";
+import Overlay from "./Overlay";
 
 const Certifications = ({ id }: { id: string }) => {
   const [selectedCertificate, setSelectedCertificate] = useState("");
@@ -14,9 +14,9 @@ const Certifications = ({ id }: { id: string }) => {
         ))}
       </div>
       {selectedCertificate && (
-        <Modal toggle={() => setSelectedCertificate("")} isVisible={Boolean(selectedCertificate)}>
-          <img className="w-[60vw] max-h-[80vh]" src={selectedCertificate} />
-        </Modal>
+        <Overlay dismiss={() => setSelectedCertificate("")}>
+          <img className="object-contain" src={selectedCertificate} />
+        </Overlay>
       )}
     </Fragment>
   );
