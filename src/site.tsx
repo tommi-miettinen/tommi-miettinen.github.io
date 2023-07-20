@@ -6,7 +6,11 @@ import skhasiakkaat from "./assets/skhasiakkaat.png";
 import skhmerkkaus from "./assets/skhtarjousmerkkaus.png";
 import skhtyömaat from "./assets/skhtyömaat.png";
 import skhtyömaamerkkaus from "./assets/skhtyömaamerkkaus.png";
-import { v4 as uuid } from "uuid";
+import chadbet1 from "./assets/chadbet1.png";
+import chadbet2 from "./assets/chadbet2.png";
+import chadbet3 from "./assets/chadbet3.png";
+import chadbet4 from "./assets/chadbet4.png";
+import chadbet5 from "./assets/chadbet5.png";
 
 export const site = {
   email: "tommi.a.miettinen@gmail.com",
@@ -211,51 +215,44 @@ export const site = {
       company: "Suomen katuhuolto OY",
       role: "Fullstack kehittäjä",
       timePeriod: "2022 - 2023",
-      description: "",
-      technologies: "React, TypeScript, Node.js, MongoDB, Mapbox, Express, TailwindCSS",
       image: "path-to-your-image",
       projects: [
         {
           projectName: "Sovellus toiminnan digitalisointiin",
-          description: "Toiminnan digitalisointia",
-          technologies: "React, TypeScript, Node.js, MongoDB, Mapbox, Express, TailwindCSS",
-
-          features: [
-            {
-              featureName: "Asiakasrekisteri",
-              featureId: uuid(),
-              description: "Näyttää yksityiskohtaiset asiakastiedot, mukaan lukien paikkatiedot karttanäkymässä.",
-              screenshots: [skhasiakkaat],
-            },
-            {
-              featureName: "Tarjouksen Luonti",
-              featureId: uuid(),
-              description: "Työkohteiden merkitseminen ajamalla merkkaus päällä tai manuaalisesti klikkailemalla karttaa.",
-              screenshots: [skhmerkkaus, skhtyömaamerkkaus],
-            },
-            {
-              featureName: "Työmaat kartalla",
-              featureId: uuid(),
-              description: "Hyväksytystä tarjouksesta luodut työkohteet eri työtiimeille (Maalaus, Kestomerkintä, Piki).",
-              screenshots: [skhtyömaat],
-            },
-          ],
+          description: `
+          Kehitin sovelluksen yrityksen toiminnan digitalisointiin. Ominaisuuksia ovat mm. asiakasrekisteri karttanäkymällä, tarjousten luominen ja lähettäminen sähköpostiin, työkohteiden seuranta ja hallinta, sekä loppuraporttien tuottaminen. Sovelluksella voi myös päivittää yrityksen hinnastoa ja tuotteita, sekä tarkastella ja hallinnoida laskutustietoja valmiista töistä.`,
+          technologies: "React, TypeScript, Node.js, MongoDB, Mapbox, Express, tailwindcss",
+          screenshots: [skhasiakkaat, skhmerkkaus, skhtyömaamerkkaus, skhtyömaat],
         },
       ],
     },
     {
       company: "Freelance",
       role: "Fullstack kehittäjä",
-      timePeriod: "2022 - 2023",
-      description: "Kryptokasinon demoversio",
-      technologies: "React, TypeScript, Node.js, MongoDB, SocketIO, Express, TailwindCSS",
+      timePeriod: "2021 - 2022",
+      projects: [
+        {
+          projectName: "Kryptokasino MVP/demoversio",
+          description: `Suosittujen CSGO skinisivustojen inspiroima kryptokasinon mvp/demoversio. Peleinä Crash, Jackpot sekä Ruletti.
+          Sivuston ominaisuuksina WalletConnect-autentikaatio, pelit, chatti sekä Provably fair systeemi.
+          `,
+          screenshots: [chadbet, chadbet1, chadbet2, chadbet3, chadbet4, chadbet5],
+          technologies: "React, TypeScript, Node.js, MongoDB, SocketIO, Express, tailwindcss",
+        },
+      ],
     },
     {
       company: "Collapick",
       role: "Harjoittelija",
       timePeriod: "2019 - 2020",
-      description: "Manuaalista testausta sekä React-kehitystä sisäiseen työkaluun",
-      technologies: "",
+      projects: [
+        {
+          projectName: "Kehitystä ja testausta",
+          description: "Manuaalista testausta sekä React-kehitystä sisäiseen työkaluun",
+          technologies: "",
+          screenshots: [],
+        },
+      ],
     },
   ],
 };

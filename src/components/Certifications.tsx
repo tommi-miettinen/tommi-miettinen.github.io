@@ -1,24 +1,27 @@
-import { useState, Fragment } from "react";
 import { site } from "../site";
 import Overlay from "./Overlay";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Certifications = ({ id }: { id: string }) => {
-  const [selectedCertificate, setSelectedCertificate] = useState("");
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const filenameFromSrc = (path: string) => encodeURIComponent(path.split("/").pop()!);
 
   return (
-    <Fragment>
-      <div id={id} className="p-4">
-        <h2 className="text-xl mb-2">Sertifikaatit</h2>
-        {site.certificates.map((v) => (
-          <img onClick={() => setSelectedCertificate(v)} className="w-[250px] cursor-pointer hover:opacity-90" src={v} />
-        ))}
-      </div>
-      {selectedCertificate && (
-        <Overlay dismiss={() => setSelectedCertificate("")}>
-          <img className="object-contain" src={selectedCertificate} />
-        </Overlay>
-      )}
-    </Fragment>
+    <div id={id} className="p-4">
+      <h2 className="text-xl mb-2">Sertifikaatit</h2>
+      {site.certificates.map((v) => (
+        <article>
+          <img onClick={() => navigate(filenameFromSrc(v))} className="w-[250px] cursor-pointer hover:opacity-90" src={v} />
+          {pathname.includes(filenameFromSrc(v)) && (
+            <Overlay dismiss={() => navigate(-1)}>
+              <img className="object-contain max-h-full max-w-full overflow-auto" src={v} alt="zoomed certificate" />
+            </Overlay>
+          )}
+        </article>
+      ))}
+    </div>
   );
 };
 

@@ -1,27 +1,30 @@
 import { site } from "../site";
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 import Overlay from "./Overlay";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Extra = ({ id }: { id: string }) => {
-  const [showItem, setShowItem] = useState(false);
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   return (
     <Fragment>
       <div id={id} className="p-4">
         <h3 className="text-xl mb-2">Lisätiedot</h3>
-        <div className="flex items-center border border-green-500 bg-green-400 bg-opacity-5 border-opacity-30 p-4 rounded-md">
-          Olen oikeutettu palkkatukeen 7 kuukauden ajalta.{" "}
+        <div className="flex items-center border border-indigo-500 bg-indigo-400 bg-opacity-5 border-opacity-30 p-4 rounded-md">
+          Olen oikeutettu palkkatukeen 7 kuukauden ajalta.
           <button
-            onClick={() => setShowItem(true)}
+            onClick={() => navigate("/palkkatuki")}
             type="button"
-            className="ml-auto text-white bg-gray-700 hover:bg-opacity-80 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5"
+            className="ml-auto text-white bg-gray-700 hover:bg-opacity-80 focus:outline-none rounded-lg text-sm px-5 py-2.5"
           >
             Palkkatuki
           </button>
         </div>
       </div>
-      {showItem && (
-        <Overlay dismiss={() => setShowItem(false)}>
-          <img className="object-contain" src={site.wageSubsidy} />
+      {pathname.includes("palkkatuki") && (
+        <Overlay dismiss={() => navigate(-1)}>
+          <img className="object-contain max-h-full max-w-full overflow-auto" src={site.wageSubsidy} />
         </Overlay>
       )}
     </Fragment>
