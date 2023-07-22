@@ -11,7 +11,7 @@ const Skill = ({ skills, icon }: { skills: string; icon: JSX.Element }) => {
 
 const Skills = ({ id }: { id: string }) => {
   return (
-    <div id={id} className="p-4 flex flex-col gap-2 font-semibold">
+    <div id={id} className="p-4 flex flex-col gap-2">
       <h2 className="text-xl mb-2">Taidot</h2>
       {site.skills.map((skill) => (
         <Skill key={skill.name} skills={skill.description} icon={skill.icon!} />

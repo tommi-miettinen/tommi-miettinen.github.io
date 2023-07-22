@@ -8,7 +8,7 @@ interface SectionOrderStore {
 }
 
 export const useSectionOrderStore = create<SectionOrderStore>(() => ({
-  navItems: ["Esittely", "Taidot", "Kokemus", "Sertifikaatit", "Harrastukset", "Yhteystiedot", "Lisätiedot"],
+  navItems: ["Esittely", "Taidot", "Kokemus", "Portfolio", "Sertifikaatit", "Harrastukset", "Yhteystiedot", "Lisätiedot"],
   currentlyDraggedItem: null,
   currentlyHoveredItem: null,
   currentlyCopiedItem: null,

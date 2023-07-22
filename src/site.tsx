@@ -12,6 +12,11 @@ import chadbet3 from "./assets/chadbet3.png";
 import chadbet4 from "./assets/chadbet4.png";
 import chadbet5 from "./assets/chadbet5.png";
 
+import onedrive1 from "./assets/onedrive1.png";
+import onedrive2 from "./assets/onedrive2.png";
+import onedrive3 from "./assets/onedrive3.png";
+import onedrive4 from "./assets/onedrive4.png";
+
 export const site = {
   email: "tommi.a.miettinen@gmail.com",
   phone: "0443250495",
@@ -253,6 +258,25 @@ export const site = {
           screenshots: [],
         },
       ],
+    },
+  ],
+  portfolio: [
+    {
+      name: "OneDrive",
+      description:
+        "Microsoft OneDriven API:a käyttävä websovellus jossa otettu huomioon saavutettavuus (semanttinen html, aria-labelit, tab-navigaatio), responsiivisuus",
+      technologies: "TypeScript, React, C#, ASP.net",
+      screenshots: [onedrive1, onedrive2, onedrive3, onedrive4],
+      links: [
+        { text: "Frontend", url: "https://github.com/tommi-miettinen/onedrive" },
+        { text: "Backend", url: "https://github.com/tommi-miettinen/ASP.net" },
+      ],
+    },
+    {
+      name: "Tämä sivu",
+      description: "CV / Hakemus",
+      technologies: "TypeScript, React",
+      links: [{ text: "Tämä sivu", url: "https://github.com/tommi-miettinen/tommi-miettinen.github.io" }],
     },
   ],
 };

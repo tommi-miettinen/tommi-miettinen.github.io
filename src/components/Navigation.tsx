@@ -85,7 +85,10 @@ const Navigation = () => {
   };
 
   return (
-    <div onContextMenu={handleRightClick} className="text-white border-r p-4 h-full hidden sm:block sm:w-[250px]">
+    <div
+      onContextMenu={handleRightClick}
+      className="bg-gray-950 text-white border-r border-gray-700 p-4 h-full hidden sm:block sm:w-[250px]"
+    >
       <TreeView aria-label="Files">
         <TreeView.Item defaultExpanded={true} id="src">
           <TreeView.LeadingVisual>

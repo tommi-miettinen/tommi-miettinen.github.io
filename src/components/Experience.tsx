@@ -13,20 +13,20 @@ const Experience = ({ id }: { id: string }) => {
   return (
     <Fragment>
       <div id={id} className="py-4 px-8 relative flex flex-col h-full">
-        <h2 className="text-xl font-semibold mb-4 -ml-4">Kokemus</h2>
-        <ol className="relative border-l border-gray-200 dark:border-gray-700 flex flex-col h-full">
+        <h2 className="text-xl mb-4 -ml-4">Kokemus</h2>
+        <ol className="relative border-l border-gray-200 dark:border-gray-700 flex flex-col h-full gap-4">
           {site.experience.map((job) => (
-            <li key={job.company} className="ml-6 flex flex-col mb-8">
+            <li key={job.company} className="ml-6 flex flex-col">
               <span className="absolute flex items-center justify-center w-6 h-6 bg-indigo-300 rounded-full -left-3"></span>
-              <h3 className="flex items-center -mt-1 mb-1 text-xl text-gray-900 dark:text-white">{job.company}</h3>
-              <p>{job.role}</p>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.timePeriod}</time>
+              <h3 className="flex items-center -mt-1 mb-1 text-lg text-white">{job.company}</h3>
+              <p className="text-sm my-1">{job.role}</p>
+              <time className="block mb-2 text-sm leading-none text-gray-400">{job.timePeriod}</time>
               {job.projects?.map((project) => (
                 <Fragment>
                   <div className="flex flex-col">
-                    <h4 className="font-semibold text-lg">{project.projectName}</h4>
-                    <p className="my-2">{project.description}</p>
-                    <p>{project.technologies}</p>
+                    <h4 className="font-medium">{project.projectName}</h4>
+                    <p className="my-2 text-sm">{project.description}</p>
+                    <p className="text-sm">{project.technologies}</p>
                     {project.screenshots.length > 0 && (
                       <button
                         onClick={() => navigate(`/${toUrl(project.projectName)}`)}

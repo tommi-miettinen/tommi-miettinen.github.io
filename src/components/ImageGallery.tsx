@@ -11,14 +11,14 @@ const ImageGallery = ({ images, className }: { className?: string; images: strin
 
   return (
     <Fragment>
-      <div className={twMerge("bg-gray-800 rounded-lg grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 p-2", className)}>
+      <div className={twMerge("rounded-lg grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 p-2", className)}>
         {images.map((image) => (
           <Fragment>
             <div
               className="relative flex flex-col items-center justify-center hover:opacity-80"
               onClick={() => navigate(`${location.pathname}/${filenameFromSrc(image)}`)}
             >
-              <img className="h-auto max-w-full rounded-lg border  cursor-pointer" src={image} alt="" />
+              <img className="h-auto max-w-full object-contain rounded-lg border cursor-pointer" src={image} alt="" />
             </div>
             {location.pathname.includes(filenameFromSrc(image)!) && (
               <Overlay dismiss={() => navigate(-1)}>
