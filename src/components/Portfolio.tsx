@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { site } from "../site";
 import ImageGallery from "./ImageGallery";
 import Overlay from "./Overlay";

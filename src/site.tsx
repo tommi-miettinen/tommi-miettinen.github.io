@@ -17,6 +17,8 @@ import onedrive2 from "./assets/onedrive2.png";
 import onedrive3 from "./assets/onedrive3.png";
 import onedrive4 from "./assets/onedrive4.png";
 
+import trivore from "./assets/trivore.png";
+
 export const site = {
   email: "tommi.a.miettinen@gmail.com",
   phone: "0443250495",
@@ -226,7 +228,7 @@ export const site = {
           projectName: "Sovellus toiminnan digitalisointiin",
           description: `
           Kehitin sovelluksen yrityksen toiminnan digitalisointiin. Ominaisuuksia ovat mm. asiakasrekisteri karttanäkymällä, tarjousten luominen ja lähettäminen sähköpostiin, työkohteiden seuranta ja hallinta, sekä loppuraporttien tuottaminen. Sovelluksella voi myös päivittää yrityksen hinnastoa ja tuotteita, sekä tarkastella ja hallinnoida laskutustietoja valmiista töistä.`,
-          technologies: "React, TypeScript, Node.js, MongoDB, Mapbox, Express, tailwindcss",
+          technologies: "React, Zustand, TypeScript, Node.js, MongoDB, Mapbox, Express, tailwindcss",
           screenshots: [skhasiakkaat, skhmerkkaus, skhtyömaamerkkaus, skhtyömaat],
         },
       ],
@@ -242,7 +244,7 @@ export const site = {
           Sivuston ominaisuuksina WalletConnect-autentikaatio, pelit, chatti sekä Provably fair systeemi.
           `,
           screenshots: [chadbet, chadbet1, chadbet2, chadbet3, chadbet4, chadbet5],
-          technologies: "React, TypeScript, Node.js, MongoDB, SocketIO, Express, tailwindcss",
+          technologies: "React, Zustand, TypeScript, Node.js, MongoDB, SocketIO, Express, tailwindcss",
         },
       ],
     },
@@ -265,7 +267,7 @@ export const site = {
       name: "OneDrive",
       description:
         "Microsoft OneDriven API:a käyttävä websovellus jossa otettu huomioon saavutettavuus (semanttinen html, aria-labelit, tab-navigaatio), responsiivisuus",
-      technologies: "TypeScript, React, C#, ASP.net",
+      technologies: "TypeScript, React, Zustand, C#, ASP.net, Playwright",
       screenshots: [onedrive1, onedrive2, onedrive3, onedrive4],
       links: [
         { text: "Frontend", url: "https://github.com/tommi-miettinen/onedrive" },
@@ -275,8 +277,27 @@ export const site = {
     {
       name: "Tämä sivu",
       description: "CV / Hakemus",
-      technologies: "TypeScript, React",
+      technologies: "TypeScript, React, Zustand, tailwindcss, Playwright",
       links: [{ text: "Tämä sivu", url: "https://github.com/tommi-miettinen/tommi-miettinen.github.io" }],
+    },
+    {
+      name: "Rekrytehtävä",
+      description: "Rekrytehtävä jossa piti pystyä kirjautumaan OpenID connectilla sekä muokkaamaan käyttäjän tietoja.",
+      links: [{ text: "Github", url: "https://github.com/tommi-miettinen/duunitori" }],
+      screenshots: [trivore],
+      technologies: "React, NextJS",
+    },
+    {
+      name: "Paytrail testi mobiilisovellus",
+      description: "Käyttäjä voi lisätä tuotteita ostoskoriin ja maksaa ne paytraililla.",
+      links: [{ text: "Github", url: "https://github.com/tommi-miettinen/paytrail-demo" }],
+      technologies: "TypeScript, Zustand, React Native, tailwindcss",
+    },
+    {
+      name: "Duunitorin rekrytehtävä",
+      description:
+        "Duunitorin rekrytehtävä jossa vaatimuksina listanäkymä ja sivutus 1000 työpaikalle ja tarkka näkymä yksittäiselle työpaikalle.",
+      links: [{ text: "Github", url: "https://github.com/tommi-miettinen/duunitori" }],
     },
   ],
 };
