@@ -1,16 +1,19 @@
 import { site } from "../site";
 import Overlay from "./Overlay";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Certifications = ({ id }: { id: string }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
+  const { t } = useTranslation();
+
   const filenameFromSrc = (path: string) => encodeURIComponent(path.split("/").pop()!);
 
   return (
     <div id={id} className="p-4">
-      <h2 className="text-xl mb-2">Sertifikaatit</h2>
+      <h2 className="text-xl mb-2">{t("certificates")}</h2>
       {site.certificates.map((v) => (
         <article>
           <img onClick={() => navigate(filenameFromSrc(v))} className="w-[250px] cursor-pointer hover:opacity-90" src={v} />

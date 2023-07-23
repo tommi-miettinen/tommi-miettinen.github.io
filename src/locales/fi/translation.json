@@ -1,0 +1,26 @@
+{
+  "benchPress": "Penkki",
+  "lifting": "Kuntosali",
+  "site": "Sivu",
+  "introduction": "Esittely",
+  "skills": "Taidot",
+  "experience": "Kokemus",
+  "portfolio": "Portfolio",
+  "certificates": "Sertifikaatit",
+  "hobbies": "Harrastukset",
+  "contactInfo": "Yhteystiedot",
+  "additionalInfo": "Lisätiedot",
+  "images": "Kuvat",
+  "greetingWithName": "Hei {name}, olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.",
+  "greetingWithoutName": "Hei, olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.",
+  "navItems": {
+    "Introduction": "Esittely",
+    "Skills": "Taidot",
+    "Experience": "Kokemus",
+    "Certificates": "Sertifikaatit",
+    "Portfolio": "Portfolio",
+    "Hobbies": "Harrastukset",
+    "ContactInfo": "Yhteystiedot",
+    "AdditionalInfo": "Lisätiedot"
+  }
+}

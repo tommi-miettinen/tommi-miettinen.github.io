@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TreeView } from "@primer/react";
 import { FileIcon } from "@primer/octicons-react";
+import { useTranslation } from "react-i18next";
 import {
   deleteNavItem,
   handleDrop,
@@ -15,6 +16,8 @@ import Menu from "./Menu";
 const CustomTreeViewItem = ({ item }: { item: string }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [menuPosition, setMenuPosition] = useState<{ x?: number; y?: number }>({});
+
+  const { t } = useTranslation();
 
   const handleRightClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -49,7 +52,7 @@ const CustomTreeViewItem = ({ item }: { item: string }) => {
           <TreeView.LeadingVisual>
             <FileIcon />
           </TreeView.LeadingVisual>
-          {item}
+          {t(`navItems.${item}`)}
         </TreeView.Item>
         {isMenuOpen && (
           <Menu isOpen={isMenuOpen} setIsOpen={() => setMenuOpen((v) => !v)} {...menuPosition}>
@@ -73,6 +76,8 @@ const Navigation = () => {
   const [menuPosition, setMenuPosition] = useState<{ x?: number; y?: number }>({});
   const navItems = useSectionOrderStore((state) => state.navItems);
 
+  const { t } = useTranslation();
+
   const handleRightClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setMenuPosition({ x: e.clientX, y: e.clientY });
@@ -94,7 +99,7 @@ const Navigation = () => {
           <TreeView.LeadingVisual>
             <TreeView.DirectoryIcon />
           </TreeView.LeadingVisual>
-          Sivu
+          {t("site")}
           <TreeView.SubTree>
             {navItems.map((item) => (
               <CustomTreeViewItem item={item} />

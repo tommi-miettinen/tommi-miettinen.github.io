@@ -2,15 +2,18 @@ import { site } from "../site";
 import { Fragment } from "react";
 import Overlay from "./Overlay";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Extra = ({ id }: { id: string }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <div id={id} className="p-4">
-        <h3 className="text-xl mb-2">Lisätiedot</h3>
+        <h3 className="text-xl mb-2">{t("additionalInfo")}</h3>
         <div className="flex items-center border border-indigo-500 bg-indigo-400 bg-opacity-5 border-opacity-30 p-4 rounded-md">
           Olen oikeutettu palkkatukeen 7 kuukauden ajalta.
           <button

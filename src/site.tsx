@@ -219,43 +219,76 @@ export const site = {
   ],
   experience: [
     {
-      company: "Suomen katuhuolto OY",
-      role: "Fullstack kehittäjä",
+      company: {
+        fi: "Suomen katuhuolto OY",
+        en: "Finnish Street Maintenance Ltd",
+      },
+      role: {
+        fi: "Fullstack kehittäjä",
+        en: "Fullstack Developer",
+      },
       timePeriod: "2022 - 2023",
       image: "path-to-your-image",
       projects: [
         {
-          projectName: "Sovellus toiminnan digitalisointiin",
-          description: `
-          Kehitin sovelluksen yrityksen toiminnan digitalisointiin. Ominaisuuksia ovat mm. asiakasrekisteri karttanäkymällä, tarjousten luominen ja lähettäminen sähköpostiin, työkohteiden seuranta ja hallinta, sekä loppuraporttien tuottaminen. Sovelluksella voi myös päivittää yrityksen hinnastoa ja tuotteita, sekä tarkastella ja hallinnoida laskutustietoja valmiista töistä.`,
+          projectName: {
+            fi: "Sovellus toiminnan digitalisointiin",
+            en: "Application for Digitalizing Operations",
+          },
+          description: {
+            fi: "Kehitin sovelluksen yrityksen toiminnan digitalisointiin...",
+            en: "I developed an application for digitizing the operations of the company...",
+          },
           technologies: "React, Zustand, TypeScript, Node.js, MongoDB, Mapbox, Express, tailwindcss",
           screenshots: [skhasiakkaat, skhmerkkaus, skhtyömaamerkkaus, skhtyömaat],
         },
       ],
     },
     {
-      company: "Freelance",
-      role: "Fullstack kehittäjä",
+      company: {
+        fi: "Freelance",
+        en: "Freelance",
+      },
+      role: {
+        fi: "Fullstack kehittäjä",
+        en: "Fullstack Developer",
+      },
       timePeriod: "2021 - 2022",
       projects: [
         {
-          projectName: "Kryptokasino MVP/demoversio",
-          description: `Suosittujen CSGO skinisivustojen inspiroima kryptokasinon mvp/demoversio. Peleinä Crash, Jackpot sekä Ruletti.
-          Sivuston ominaisuuksina WalletConnect-autentikaatio, pelit, chatti sekä Provably fair systeemi.
-          `,
+          projectName: {
+            fi: "Kryptokasino MVP/demoversio",
+            en: "Crypto Casino MVP/Demo Version",
+          },
+          description: {
+            fi: `Suosittujen CSGO skinisivustojen inspiroima kryptokasinon mvp/demoversio. Peleinä Crash, Jackpot sekä Ruletti...`,
+            en: "Inspired by popular CSGO skin sites, this is a demo version of a crypto casino MVP. Features Crash, Jackpot, and Roulette games...",
+          },
           screenshots: [chadbet, chadbet1, chadbet2, chadbet3, chadbet4, chadbet5],
           technologies: "React, Zustand, TypeScript, Node.js, MongoDB, SocketIO, Express, tailwindcss",
         },
       ],
     },
     {
-      company: "Collapick",
-      role: "Harjoittelija",
+      company: {
+        fi: "Collapick",
+        en: "Collapick",
+      },
+      role: {
+        fi: "Harjoittelija",
+        en: "Intern",
+      },
       timePeriod: "2019 - 2020",
       projects: [
         {
-          projectName: "Kehitystä ja testausta",
-          description: "Manuaalista testausta sekä React-kehitystä sisäiseen työkaluun",
+          projectName: {
+            fi: "Kehitystä ja testausta",
+            en: "Development and Testing",
+          },
+          description: {
+            fi: "Manuaalista testausta sekä React-kehitystä sisäiseen työkaluun",
+            en: "Manual testing and React development for an internal tool",
+          },
           technologies: "",
           screenshots: [],
         },

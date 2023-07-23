@@ -1,11 +1,13 @@
 import wow from "../assets/wow.png";
 import csgo from "../assets/csgo.png";
 import overwatch from "../assets/overwatch.png";
+import { useTranslation } from "react-i18next";
 
 const Hobbies = ({ id }: { id: string }) => {
+  const { t } = useTranslation();
   return (
     <div id={id} className="p-4">
-      <h3 className="text-xl mb-2">Harrastukset</h3>
+      <h3 className="text-xl mb-2">{t("hobbies")}</h3>
       <div className="h-[32px] flex items-center sm:w-[300px] justify-between">
         CSGO <img className="h-full" src={csgo} />
       </div>
@@ -16,9 +18,9 @@ const Hobbies = ({ id }: { id: string }) => {
         Wow <img className="h-full" src={wow} />
       </div>
       <div className="h-[32px] flex items-center sm:w-[300px] justify-between">
-        Kuntosali
+        {t("lifting")}
         <div className="flex items-center">
-          100kg penkki
+          100kg {t("benchPress")}
           <input
             disabled
             checked

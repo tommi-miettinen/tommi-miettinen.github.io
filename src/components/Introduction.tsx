@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const useQueryParams = () => {
   let query = window.location.search;
   let params = new URLSearchParams(query);
@@ -7,18 +9,13 @@ const useQueryParams = () => {
 const Introduction = ({ id }: { id: string }) => {
   const params = useQueryParams();
   const name = params.get("vastaanottaja");
+  const { t } = useTranslation();
 
-  const greeting = name ? (
-    <h1 className="text-xl text-white">
-      Hei <span className="underline capitalize">{name},</span> olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.
-    </h1>
-  ) : (
-    <h1 className="text-xl text-white">Hei olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.</h1>
-  );
+  const greeting = name ? t("greetingWithName", { name: name }) : t("greetingWithoutName");
 
   return (
     <div id={id} className="p-4 h-full flex flex-col">
-      {greeting}
+      <h1 className="text-xl text-white">{greeting}</h1>
     </div>
   );
 };

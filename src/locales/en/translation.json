@@ -1,0 +1,26 @@
+{
+  "benchPress": "Bench press",
+  "lifting": "Lifting",
+  "site": "Site",
+  "introduction": "Introduction",
+  "skills": "Skills",
+  "experience": "Experience",
+  "portfolio": "Portfolio",
+  "certificates": "Certificates",
+  "hobbies": "Hobbies",
+  "contactInfo": "Contact Information",
+  "additionalInfo": "Additional Information",
+  "images": "Images",
+  "greetingWithName": "Hi, {name}, I'm Tommi Miettinen, a self-taught frontend/fullstack developer.",
+  "greetingWithoutName": "Hi, I'm Tommi Miettinen, a self-taught frontend/fullstack developer.",
+  "navItems": {
+    "Introduction": "Introduction",
+    "Skills": "Skills",
+    "Experience": "Experience",
+    "Certificates": "Certificates",
+    "Portfolio": "Portfolio",
+    "Hobbies": "Hobbies",
+    "ContactInfo": "Contact Info",
+    "AdditionalInfo": "Additional Info"
+  }
+}
