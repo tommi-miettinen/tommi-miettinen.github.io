@@ -9,24 +9,19 @@ import { initReactI18next } from "react-i18next";
 import translationEN from "./locales/en/translation.json";
 import translationFI from "./locales/fi/translation.json";
 
-// the translations
-const resources = {
-  en: {
-    translation: translationEN,
-  },
-  fi: {
-    translation: translationFI,
-  },
-};
+const savedLanguage = localStorage.getItem("language");
 
 i18n.use(initReactI18next).init({
-  resources,
-  lng: "fi",
-  fallbackLng: "fi",
-
-  interpolation: {
-    escapeValue: false, // react already safes from xss
+  resources: {
+    en: {
+      translation: translationEN,
+    },
+    fi: {
+      translation: translationFI,
+    },
   },
+  lng: savedLanguage || "fi",
+  fallbackLng: "fi",
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -31,8 +31,9 @@ const App = () => {
       <div className="h-screen w-screen flex bg-gray-900 text-white text-sm">
         <div className="flex w-full h-full">
           <Navigation />
-          <LanguageSwitcher />
+
           <div className="flex flex-col w-full h-full overflow-auto py-8 gap-12 sm:p-8">
+            <LanguageSwitcher className="w-[100px] ml-auto" />
             {navItems.map((item) => {
               const baseName = item.split("(")[0];
               return (
