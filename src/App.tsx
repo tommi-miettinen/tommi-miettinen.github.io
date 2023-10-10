@@ -6,7 +6,6 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import { useSectionOrderStore } from "./store/sectionOrderStore";
 import Certifications from "./components/Certifications";
-import Extra from "./components/Extra";
 import Hobbies from "./components/Hobbies";
 
 const componentsMap: Record<string, (id: string) => JSX.Element> = {
@@ -16,7 +15,6 @@ const componentsMap: Record<string, (id: string) => JSX.Element> = {
   Taidot: (id: string) => <Skills id={id} />,
   Yhteystiedot: (id: string) => <ContactInfo id={id} />,
   Harrastukset: (id: string) => <Hobbies id={id} />,
-  Lisätiedot: (id: string) => <Extra id={id} />,
 };
 
 const App = () => {

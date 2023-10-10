@@ -10,10 +10,10 @@ const Introduction = ({ id }: { id: string }) => {
 
   const greeting = name ? (
     <h1 className="text-xl text-white">
-      Hei <span className="underline capitalize">{name},</span> olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.
+      Hei <span className="underline capitalize">{name},</span> olen Tommi Miettinen, frontend/fullstack-kehittäjä.
     </h1>
   ) : (
-    <h1 className="text-xl text-white">Hei olen Tommi Miettinen, itseoppinut frontend/fullstack-kehittäjä.</h1>
+    <h1 className="text-xl text-white">Hei olen Tommi Miettinen, frontend/fullstack-kehittäjä.</h1>
   );
 
   return (

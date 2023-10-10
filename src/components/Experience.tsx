@@ -18,7 +18,7 @@ const Experience = ({ id }: { id: string }) => {
           {site.experience.map((job) => (
             <li key={job.company} className="ml-6 flex flex-col mb-8">
               <span className="absolute flex items-center justify-center w-6 h-6 bg-indigo-300 rounded-full -left-3"></span>
-              <h3 className="flex items-center -mt-1 mb-1 text-xl text-gray-900 dark:text-white">{job.company}</h3>
+              <h3 className="flex items-center -mt-1 mb-1 text-xl text-white">{job.company}</h3>
               <p>{job.role}</p>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.timePeriod}</time>
               {job.projects?.map((project) => (
